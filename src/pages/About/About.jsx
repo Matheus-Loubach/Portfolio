@@ -9,9 +9,16 @@ import { DiNodejs } from 'react-icons/di';
 import { SiMongodb } from 'react-icons/si';
 import { SiMysql } from 'react-icons/si';
 import { BiLogoPhp } from 'react-icons/bi';
+import CurriculoPDF from '../../download/CurriculoDev2.pdf';
 
 
 const About = () => {
+
+  const openPDF = () => {
+    window.open(CurriculoPDF, '_blank');
+  };
+
+
   return (
     <div className="text-start">
       <section className="max-sm:w-[100%] max-sm:font-semibold w-[50%] md:ml-[10%] text-gray-200 border-b-[1px] pb-[20px] border-gray-700 ">
@@ -39,6 +46,8 @@ const About = () => {
             em todas as suas formas. Além disso, a música é a minha terapia, e nada supera o prazer de desfrutar de ótimas canções.
           </p>
         </div>
+       <button className='text-[18px] font-medium p-[5px] border-[1px] border-solid border-[#ebebeb] rounded-xl' onClick={openPDF}>Download C.V</button>
+
       </section>
       <section className="w-[50%] md:ml-[10%] text-gray-200 pt-[20px]">
         <h2 className="text-[1.2em]  font-bold">Skills</h2>
